@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - KLG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="nome-site">KLG</a>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir ou fechar o menu">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="produtos.html" class="ativo">Produtos</a>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html" id="link-login" class="botao-link">Login</a>
+        <a href="login.html#cadastro" id="link-cadastro" class="botao-link botao-link-cheio">Cadastro</a>
+        <a href="#" id="link-sair" class="botao-link oculto">Sair</a>
+        <button class="botao-tema" id="botao-tema">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-pagina">Cardápio</h1>
+
+        <!-- Busca -->
+        <div>
+          <label for="campo-busca">Buscar produto</label>
+          <input type="text" id="campo-busca" maxlength="40" placeholder="Digite o nome do produto">
+        </div>
+
+        <!-- Os cards são criados pelo JavaScript (lista de produtos em js/script.js) -->
+        <div id="categoria-frangos">
+          <h2 class="titulo-categoria">Frangos</h2>
+          <div class="grade-produtos" id="lista-frangos"></div>
+        </div>
+
+        <div id="categoria-combos">
+          <h2 class="titulo-categoria">Combos</h2>
+          <div class="grade-produtos" id="lista-combos"></div>
+        </div>
+
+        <p id="sem-resultado" class="vazio oculto">Nenhum produto encontrado para essa busca.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        <h3>KLG Delivery de Frangos</h3>
+        <p>Frango crocante, quentinho e entregue na sua casa.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Telefone: (31) 3000-0000</p>
+        <p>E-mail: contato@klg.com.br</p>
+        <p>Atendimento: todos os dias, das 11h às 23h</p>
+      </div>
+    </div>
+    <p class="rodape-direitos">KLG</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+/* ===== style.css - Site KLG ===== */
+
+/* Cores: o modo escuro só troca os valores destas variáveis */
+:root {
+  --vermelho: #d90f1f;
+  --fundo: #f4f4f4;
+  --cartao: #ffffff;
+  --texto: #222222;
+  --suave: #666666;
+  --borda: #dddddd;
+  --link: #d90f1f;
+}
+
+body.escuro {
+  --fundo: #181818;
+  --cartao: #262626;
+  --texto: #f2f2f2;
+  --suave: #b5b5b5;
+  --borda: #444444;
+  --link: #ff6b6b;
+}
+
+/* ----- Base ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--link);
+}
+
+h1,
+h2 {
+  color: var(--link);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.secao {
+  padding: 40px 0;
+}
+
+.secao-cinza {
+  background: var(--cartao);
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulo-pagina {
+  margin-bottom: 20px;
+}
+
+.texto-centro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centro {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.vazio {
+  text-align: center;
+  color: var(--suave);
+  padding: 20px 0;
+}
+
+/* ----- Cabeçalho e menu ----- */
+.cabecalho {
+  background: var(--vermelho);
+  color: #fff;
+}
+
+.cabecalho-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nome-site {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 2px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  border-bottom: 2px solid #fff;
+}
+
+.menu a.botao-link {
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 5px 12px;
+}
+
+.menu a.botao-link-cheio {
+  background: #fff;
+  color: var(--vermelho);
+  font-weight: bold;
+}
+
+.botao-tema {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Botão ☰ (só aparece no celular) */
+.botao-menu {
+  display: none;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ----- Botões ----- */
+.botao {
+  display: inline-block;
+  background: var(--vermelho);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.botao-branco {
+  background: #fff;
+  color: var(--vermelho);
+}
+
+.botao-cinza {
+  background: #666;
+}
+
+.botao-cheio {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* ----- Banner (imagem: img/banner/banner.jpg) ----- */
+.banner {
+  background: #a80b17;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.banner-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.banner-imagem {
+  width: 420px;
+}
+
+.banner-imagem img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.banner-texto {
+  max-width: 560px;
+}
+
+.banner-texto h1 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.banner-texto p {
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+/* ----- Cards de produtos ----- */
+.grade-produtos,
+.grade-ofertas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-produto,
+.caixa-form,
+.resumo,
+.item-carrinho,
+.card-pedido {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+.card-produto {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Espaço da foto: o aviso fica atrás e a imagem cobre quando existir */
+.foto {
+  position: relative;
+  height: 180px;
+  background: var(--borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--suave);
+}
+
+.foto img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-info p {
+  color: var(--suave);
+  font-size: 14px;
+  flex: 1;
+}
+
+.card-info .preco {
+  color: var(--link);
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+  flex: none;
+}
+
+.titulo-categoria {
+  border-left: 6px solid var(--vermelho);
+  padding-left: 10px;
+  margin: 30px 0 16px;
+}
+
+/* ----- Ofertas ----- */
+.oferta {
+  border: 1px solid var(--vermelho);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+
+/* ----- Formulários ----- */
+label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--cartao);
+  color: var(--texto);
+  font-size: 16px;
+}
+
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.caixa-form {
+  padding: 22px;
+}
+
+.botoes-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.botoes-form .botao {
+  flex: 1;
+}
+
+/* Mensagens de erro e sucesso */
+.mensagem {
+  display: none;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.mensagem.erro {
+  display: block;
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.mensagem.sucesso {
+  display: block;
+  background: #e3f6e8;
+  color: #17602b;
+}
+
+/* ----- Carrinho ----- */
+.carrinho-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.item-info {
+  flex: 1 1 180px;
+}
+
+.item-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao-qtd {
+  width: 34px;
+  height: 34px;
+  background: var(--vermelho);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.item-total {
+  font-weight: bold;
+  min-width: 90px;
+}
+
+.botao-remover {
+  background: none;
+  color: var(--link);
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.resumo {
+  padding: 20px;
+}
+
+.linha-resumo {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.linha-resumo.total {
+  border-top: 1px solid var(--borda);
+  margin-top: 6px;
+  padding-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--link);
+}
+
+/* ----- Pedidos ----- */
+.barra-pedidos {
+  margin-bottom: 20px;
+}
+
+.card-pedido {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.pedido-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-pedido ul {
+  margin: 10px 0 10px 20px;
+}
+
+.pedido-total {
+  font-weight: bold;
+  color: var(--link);
+  font-size: 18px;
+}
+
+.status {
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-0 {
+  background: #666;
+}
+
+.status-1 {
+  background: #d97706;
+}
+
+.status-2 {
+  background: #2563eb;
+}
+
+.status-3 {
+  background: #16803c;
+}
+
+/* ----- Perfil ----- */
+#area-perfil,
+#aviso-perfil {
+  max-width: 520px;
+}
+
+#dados-perfil p {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+#dados-perfil .botao {
+  margin-top: 16px;
+}
+
+/* ----- Rodapé ----- */
+.rodape {
+  background: #222;
+  color: #ddd;
+  padding: 30px 0 14px;
+  margin-top: 20px;
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.rodape h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.rodape a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.rodape-direitos {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .grade-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares: o menu fica escondido até clicar no ☰ */
+@media (max-width: 800px) {
+  .botao-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .menu a.botao-link {
+    text-align: center;
+  }
+
+  .banner-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner-imagem {
+    width: 100%;
+  }
+
+  .banner-imagem img {
+    height: 220px;
+  }
+
+  .banner-texto h1 {
+    font-size: 30px;
+  }
+
+  .grade-ofertas,
+  .duas-colunas,
+  .carrinho-layout,
+  .rodape-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grade-produtos {
+    grid-template-columns: 1fr;
+  }
+}

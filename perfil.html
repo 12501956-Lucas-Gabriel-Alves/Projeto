@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu perfil - KLG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="nome-site">KLG</a>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir ou fechar o menu">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html" class="ativo">Perfil</a>
+        <a href="login.html" id="link-login" class="botao-link">Login</a>
+        <a href="login.html#cadastro" id="link-cadastro" class="botao-link botao-link-cheio">Cadastro</a>
+        <a href="#" id="link-sair" class="botao-link oculto">Sair</a>
+        <button class="botao-tema" id="botao-tema">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-pagina">Meu perfil</h1>
+
+        <!-- Aparece se o usuário não estiver logado -->
+        <div id="aviso-perfil" class="caixa-form oculto">
+          <p>Você precisa entrar para ver seu perfil.</p>
+          <a href="login.html" class="botao botao-cheio">Fazer login</a>
+        </div>
+
+        <!-- Aparece se o usuário estiver logado -->
+        <div id="area-perfil" class="caixa-form oculto">
+          <div id="mensagem-perfil" class="mensagem"></div>
+
+          <!-- Dados do usuário -->
+          <div id="dados-perfil">
+            <p><strong>Nome:</strong> <span id="perfil-nome"></span></p>
+            <p><strong>E-mail:</strong> <span id="perfil-email"></span></p>
+            <p><strong>CPF:</strong> <span id="perfil-cpf"></span></p>
+            <p><strong>Telefone:</strong> <span id="perfil-telefone"></span></p>
+            <p><strong>Data de nascimento:</strong> <span id="perfil-nascimento"></span></p>
+            <button class="botao" id="botao-editar">Editar dados</button>
+          </div>
+
+          <!-- Formulário de edição -->
+          <form id="form-perfil" class="oculto" novalidate>
+            <label for="edit-nome">Nome completo</label>
+            <input type="text" id="edit-nome" maxlength="60">
+
+            <label for="edit-email">E-mail</label>
+            <input type="email" id="edit-email" maxlength="60">
+
+            <label for="edit-cpf">CPF</label>
+            <input type="text" id="edit-cpf" data-mascara="cpf" maxlength="14" inputmode="numeric">
+
+            <label for="edit-telefone">Telefone</label>
+            <input type="text" id="edit-telefone" data-mascara="telefone" maxlength="15" inputmode="numeric">
+
+            <label for="edit-nascimento">Data de nascimento</label>
+            <input type="text" id="edit-nascimento" data-mascara="data" maxlength="10" inputmode="numeric">
+
+            <div class="botoes-form">
+              <button type="submit" class="botao">Salvar</button>
+              <button type="button" class="botao botao-cinza" id="botao-cancelar">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        <h3>KLG Delivery de Frangos</h3>
+        <p>Frango crocante, quentinho e entregue na sua casa.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Telefone: (31) 3000-0000</p>
+        <p>E-mail: contato@klg.com.br</p>
+        <p>Atendimento: todos os dias, das 11h às 23h</p>
+      </div>
+    </div>
+    <p class="rodape-direitos">KLG</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

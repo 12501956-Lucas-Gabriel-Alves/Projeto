@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - KLG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="nome-site">KLG</a>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir ou fechar o menu">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html" class="ativo">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html" id="link-login" class="botao-link">Login</a>
+        <a href="login.html#cadastro" id="link-cadastro" class="botao-link botao-link-cheio">Cadastro</a>
+        <a href="#" id="link-sair" class="botao-link oculto">Sair</a>
+        <button class="botao-tema" id="botao-tema">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-pagina">Carrinho</h1>
+        <div class="carrinho-layout">
+
+          <div id="lista-carrinho"></div>
+
+          <aside class="resumo">
+            <h2>Resumo do pedido</h2>
+            <p class="linha-resumo"><span>Subtotal</span><span id="subtotal">R$ 0,00</span></p>
+            <p class="linha-resumo"><span>Entrega</span><span id="entrega">R$ 0,00</span></p>
+            <p class="linha-resumo total"><span>Total</span><span id="total">R$ 0,00</span></p>
+            <label for="forma-pagamento">Forma de pagamento</label>
+            <select id="forma-pagamento">
+              <option value="">Escolha...</option>
+              <option value="Pix">Pix</option>
+              <option value="Cartão">Cartão</option>
+              <option value="Dinheiro">Dinheiro</option>
+            </select>
+            <div id="mensagem-carrinho" class="mensagem"></div>
+            <button class="botao botao-cheio" id="botao-finalizar">Finalizar pedido</button>
+            <a href="produtos.html">Continuar comprando</a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        <h3>KLG Delivery de Frangos</h3>
+        <p>Frango crocante, quentinho e entregue na sua casa.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Telefone: (31) 3000-0000</p>
+        <p>E-mail: contato@klg.com.br</p>
+        <p>Atendimento: todos os dias, das 11h às 23h</p>
+      </div>
+    </div>
+    <p class="rodape-direitos">KLG</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

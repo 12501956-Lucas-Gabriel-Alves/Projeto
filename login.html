@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Cadastro - KLG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="nome-site">KLG</a>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir ou fechar o menu">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html" id="link-login" class="botao-link">Login</a>
+        <a href="login.html#cadastro" id="link-cadastro" class="botao-link botao-link-cheio">Cadastro</a>
+        <a href="#" id="link-sair" class="botao-link oculto">Sair</a>
+        <button class="botao-tema" id="botao-tema">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-pagina">Login e cadastro</h1>
+        <div class="duas-colunas">
+
+          <!-- Login -->
+          <div class="caixa-form" id="login">
+            <h2>Entrar</h2>
+            <form id="form-login" novalidate>
+              <label for="login-email">E-mail</label>
+              <input type="email" id="login-email" maxlength="60" placeholder="seuemail@exemplo.com">
+
+              <label for="login-senha">Senha</label>
+              <input type="password" id="login-senha" maxlength="20">
+
+              <div id="mensagem-login" class="mensagem"></div>
+              <button type="submit" class="botao botao-cheio">Entrar</button>
+            </form>
+            <p>Ainda não tem conta? Preencha o cadastro.</p>
+          </div>
+
+          <!-- Cadastro -->
+          <div class="caixa-form" id="cadastro">
+            <h2>Cadastro</h2>
+            <form id="form-cadastro" novalidate>
+              <label for="cad-nome">Nome completo</label>
+              <input type="text" id="cad-nome" maxlength="60" placeholder="Seu nome completo">
+
+              <label for="cad-email">E-mail</label>
+              <input type="email" id="cad-email" maxlength="60" placeholder="seuemail@exemplo.com">
+
+              <label for="cad-cpf">CPF</label>
+              <input type="text" id="cad-cpf" data-mascara="cpf" maxlength="14" inputmode="numeric" placeholder="000.000.000-00">
+
+              <label for="cad-telefone">Telefone</label>
+              <input type="text" id="cad-telefone" data-mascara="telefone" maxlength="15" inputmode="numeric" placeholder="(00) 00000-0000">
+
+              <label for="cad-nascimento">Data de nascimento</label>
+              <input type="text" id="cad-nascimento" data-mascara="data" maxlength="10" inputmode="numeric" placeholder="dd/mm/aaaa">
+
+              <label for="cad-senha">Senha (mínimo 6 caracteres)</label>
+              <input type="password" id="cad-senha" maxlength="20">
+
+              <label for="cad-confirmar">Confirmar senha</label>
+              <input type="password" id="cad-confirmar" maxlength="20">
+
+              <div id="mensagem-cadastro" class="mensagem"></div>
+              <button type="submit" class="botao botao-cheio">Cadastrar</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        <h3>KLG Delivery de Frangos</h3>
+        <p>Frango crocante, quentinho e entregue na sua casa.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Telefone: (31) 3000-0000</p>
+        <p>E-mail: contato@klg.com.br</p>
+        <p>Atendimento: todos os dias, das 11h às 23h</p>
+      </div>
+    </div>
+    <p class="rodape-direitos">KLG</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLG - Delivery de Frangos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="nome-site">KLG</a>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir ou fechar o menu">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="index.html" class="ativo">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html" id="link-login" class="botao-link">Login</a>
+        <a href="login.html#cadastro" id="link-cadastro" class="botao-link botao-link-cheio">Cadastro</a>
+        <a href="#" id="link-sair" class="botao-link oculto">Sair</a>
+        <button class="botao-tema" id="botao-tema">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner principal (imagem: img/banner/banner.jpg) -->
+    <section class="banner">
+      <div class="container banner-conteudo">
+        <div class="banner-texto">
+          <h1>Frango crocante, quentinho e entregue na sua casa</h1>
+          <p>Escolha seu frango favorito em poucos cliques e acompanhe o pedido pelo site.</p>
+          <a href="produtos.html" class="botao botao-branco">Ver cardápio</a>
+        </div>
+        <div class="banner-imagem">
+          <img src="img/banner/banner.jpg" alt="Frango crocante da KLG" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Apresentação -->
+    <section class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">Quem somos</h2>
+        <p class="texto-centro">A KLG é um delivery de frangos feito para quem gosta de comida bem preparada e sem complicação. Nosso frango é empanado e frito na hora, fica crocante por fora e macio por dentro. Escolha entre porções, baldes e combos e receba tudo em casa.</p>
+      </div>
+    </section>
+
+    <!-- Produtos em destaque (os cards são criados pelo JavaScript) -->
+    <section class="secao secao-cinza">
+      <div class="container">
+        <h2 class="titulo-secao">Produtos em destaque</h2>
+        <div class="grade-produtos" id="lista-destaques"></div>
+        <div class="centro">
+          <a href="produtos.html" class="botao">Ver cardápio completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ofertas -->
+    <section class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">Ofertas e promoções</h2>
+        <div class="grade-ofertas">
+          <div class="oferta">
+            <h3>Combo Família</h3>
+            <p>Balde de frango, batata e refrigerante: a melhor pedida para dividir com todo mundo.</p>
+          </div>
+          <div class="oferta">
+            <h3>Combo Duplo</h3>
+            <p>Dois refrigerantes, frango e batata para você e quem estiver com você.</p>
+          </div>
+          <div class="oferta">
+            <h3>Entrega com taxa fixa</h3>
+            <p>Taxa de entrega de apenas R$ 5,00 em todos os pedidos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div>
+        <h3>KLG Delivery de Frangos</h3>
+        <p>Frango crocante, quentinho e entregue na sua casa.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Telefone: (31) 3000-0000</p>
+        <p>E-mail: contato@klg.com.br</p>
+        <p>Atendimento: todos os dias, das 11h às 23h</p>
+      </div>
+    </div>
+    <p class="rodape-direitos">KLG</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
